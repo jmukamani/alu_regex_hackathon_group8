@@ -3,8 +3,8 @@
 import re
 handle = input('enter your twitter username ')
 
-pattern = re.compile('^(@).[a-zA-z(0-9)]$')
+pattern = re.compile("@(\w+)")
 if re.match(pattern,handle):
-    print("congratulation")
+    print("Twitter username found")
 else:
     print("Error")
