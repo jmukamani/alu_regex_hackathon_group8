@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+main article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+main aside {
+    flex: 2;
+    overflow-y: auto;
+}
+
+header .title {
+    font-size: 40px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
