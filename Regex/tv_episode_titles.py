@@ -3,15 +3,11 @@
 
 import re
 
-sample_string = 'Merlin Th S04E07'
+sample_string = 'Merlin Th S04E07: Last Gift'
 
-# tV_episode_titles = re.match('([A-Z]w+\s)+S\d{2}E\d{2}', sample_string)
+tV_episode_titles = re.compile('([A-Z]\w+\s?)+S\d{2}E\d{2}:\s([A-Z]\w+\s?)+')
 
-tV_episode_titles = re.match('^/D*', sample_string)
+show_names = tv_episode_titles.finditer(sample_string)
 
-# show_names = tV_episode_titles.match()
-
-print('Show', tV_episode_titles)
-
-# for name in show_names:
-#     print(name)
+for name in show_names:
+  print(name)
