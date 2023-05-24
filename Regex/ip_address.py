@@ -1,10 +1,12 @@
+
 import re
 
+ip_address = ['192.168.43.1']
+
 ip_pattern = r"^(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(?:\.(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
+ip address_match = re.match(ip pattern,ip_address)
 
-ip_address = ['192.168.0.1', '192.168.43.1', '192.158.1.38', '192.168.1.1'] 
-
-if re.match(ip_pattern, ip_address):
-    print("Valid IP address")
+if ip_address:
+    print(ip_address.group(0))
 else:
-    print("Invalid IP address")
+    print("The IP address does not match the pattern")
